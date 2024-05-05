@@ -1,15 +1,12 @@
 // Your code here
  export function isPalindrome(word){
-    console.log(word)
+   word =word.toLowerCase()
     let length =word.length
     const newWordArray=[]
-    for (let i =word.length;i > 0;i--){
-    newWordArray.push(word.charAt(length-=1) )
+    for (let i =0;i<word.length/2;i++){
+    if(word.charAt(i)!==word.charAt(word.length-1-i)){
+        return false;
     }
-    console.log(newWordArray.join(''))  
-    if(newWordArray.join('')=== word){
-    return true
-   }else{
-    return false
-   }
 }
+return true
+ }
